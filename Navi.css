@@ -30,7 +30,7 @@ body {
 
 
 
-#header__searchInput {
+.header__searchInput {
 
     height: 25px;
     width: 1400px;
@@ -42,7 +42,7 @@ body {
 
 }
 
-#btrSearch {
+.btrSearch {
     height: 30px;
     width: 200px;
     border: none;
@@ -53,7 +53,7 @@ body {
     
 }
 
-#btrSearch:hover{
+.btrSearch:hover{
     background-color: rgb(216, 148, 21);
 }
 

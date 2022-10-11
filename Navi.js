@@ -51,107 +51,50 @@ generateBooks();
 
 
 // Funkcja ktora znajdzie książkę po tytule z liter znajdujacych sie w dowolnym miejscu tekstu
-const findBook = (term) => {
-    const foundBooks = books.filter((book) => { // to zwraca ksiazki spelniajace warunek ponizej
-        return book.title.toLowerCase().includes(term.toLowerCase()); // ksiazki o tytule "term" zwroca "true"
-    })
+const findBook = () => {
+    const searchInput = document.getElementById('searchInput')
+    const validationResult = validateForm(searchInput.value);
+    if (validationResult) {
+        const formattedInput = searchInput.value.toLowerCase();
 
-    booksContainer.innerHTML = '';
-
-    foundBooks.forEach((book) => {
-        booksContainer.innerHTML += `
-            <div class="books">
-                <img class="image" src=${book.image}>
-                <p class="book__info title">${book.title}</p>
-                <p class="book__info year">${book.year}</p>
-                <p class="book__info price">${book.price}</p>
-                <p class="book__info category">${book.category}</p>
-            </div>
-        `
-    });
+        const foundBooks = books.filter((book) => { // to zwraca ksiazki spelniajace warunek ponizej
+            return book.title.toLowerCase().includes(formattedInput) || 
+            book.price.toLowerCase().includes(formattedInput) // ksiazki o tytule "term" zwroca "true"
+        })
+    
+        booksContainer.innerHTML = '';
+    
+        foundBooks.forEach((book) => {
+            booksContainer.innerHTML += `
+                <div class="books">
+                    <img class="image" src=${book.image}>
+                    <p class="book__info title">${book.title}</p>
+                    <p class="book__info year">${book.year}</p>
+                    <p class="book__info price">${book.price}</p>
+                    <p class="book__info category">${book.category}</p>
+                </div>
+            `
+        });
+    } else {
+        alert('Podaj więcej znaków');
+    }
 }
 
 // findBook('italia');
 
 
-//--------------------------
-const search = document.getElementById('btrSearch')
-const out = document.getElementById('header__searchInput')
 
 
-function foundBooks(search) {
-    document.getElementById("title").style.display = value;
-    return book.title.value == book.title.value
-}
-
-search.addEventListener('click', foundBooks);
-
-// ---------------------
-
-// const search = document.getElementById('btrSearch')
-// const out = document.getElementById('header__searchInput')
-
-// function sear () {
-//     out.innerHTML = search.value;
-// }
-
-// out/addEventListener('click', sear);
-
-///-----------------------
-
-// document.getElementById('btrSearch').addEventListener('click', () => {
-
-//     let search = document.getElementById('btrSearch').value;
-//     let elements = document.querySelectorAll('.title');
-
-//         elements.forEach((elements, index) => {
-//             if(element.innerText.includes(search.toLowerCase())){
-//                 books[index].innerHTML.remove('hide');
-//             }
-//             else{
-//                 books[index].innerHTML.add('hide');
-
-//             }
-
-//         })
-
-// });
 
 
-//-----------------------
+const search = document.getElementById('searchButton')
+const searchInput = document.getElementById('searchInput')
 
 
-//czy cholera on ciagnie teraz z iner HTML ????
-// czy tablica books ???
-// const header__searchInputs = document.getElementById('header__searchInput')
-// const btrSearchs = document.getElementById('btrSearch')
+search.addEventListener('click', findBook);
 
 
-// const searchFunction = (search) => {
-//     if (books.booksContainer(books(book.title.value)))  {
-
-//         return books.booksContainer.innerHTML.book.title.value === book.title.value
-//     }
-
-// }
-
-// btrSearchs.addEventListener('click', searchFunction);
-
-//---------------------------------------
-
-// const header__searchInput = document.querySelector('#header__searchInput')
-// const saerchBoks = document.querySelectorAll('books')
-
-// const filterList = () => {
-//     saerchBoks.forEach(itemTitle => {
-//         const match = new RegExp(header__searchInput.value, 'i').test(itemTitle.textContent)
-//         if (!match) {
-//             itemTitle.style.display = 'none'
-//         }
-//         else{
-//             itemTitle.style.display ='block'
-//         }
-//     })
-// }
-
-// header__searchInput.addEventListener('keyup', filterList);
+const validateForm = (inputValue) => {
+    return inputValue.length > 3;
+  }
+  
