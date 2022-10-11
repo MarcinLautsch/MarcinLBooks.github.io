@@ -23,13 +23,14 @@ body {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    
     margin-top: 4px;
+    border-radius: 18px;
+    box-shadow: 4px 2px 11px white;
 }
 
 
 
-.header__searchInput {
+#header__searchInput {
 
     height: 25px;
     width: 1400px;
@@ -41,14 +42,19 @@ body {
 
 }
 
-.btrSearch {
+#btrSearch {
     height: 30px;
     width: 200px;
     border: none;
     border-radius: 8px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
+    cursor: pointer;
     
+}
+
+#btrSearch:hover{
+    background-color: rgb(216, 148, 21);
 }
 
 
@@ -68,3 +74,16 @@ body {
    
 }
 
+.books{
+    font-weight: 900;
+}
+
+/* .title{
+    border-radius: 4px;
+    background-color: rgb(228, 140, 24);
+} */
+
+.book__info{
+
+background-color: red;
+}
