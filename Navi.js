@@ -12,7 +12,7 @@ const books = [{
     category: "Cate. Nauka",
 }, {
     image: "https://ecsmedia.pl/c/to-w-iext117293967.jpg",
-    title: "To",
+    title: "This",
     year: "Rok produkcji 2017",
     price: "79.80 zł",
     category: "Cate. Horror",
@@ -28,27 +28,44 @@ const books = [{
     year: "Rok produkcji 2022",
     price: "139.99 zł",
     category: "Cate. Kuchnia",
+}, {
+    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
+    title: "Italia na Talerzu",
+    year: "Rok produkcji 2022",
+    price: "139.99 zł",
+    category: "Cate. Kuchnia",
+}, {
+    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
+    title: "Italia na Talerzu",
+    year: "Rok produkcji 2022",
+    price: "139.99 zł",
+    category: "Cate. Kuchnia",
+}, {
+    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
+    title: "Italia na Talerzu",
+    year: "Rok produkcji 2022",
+    price: "139.99 zł",
+    category: "Cate. Kuchnia",
 }];
 
-const booksContainer = document.getElementById('books'); // to pobiera element DOM z HTMLa do ktorego chcesz wstrzyknac liste ksiazek
-booksContainer.innerHTML = '';
+const generateHtml = (booksList) => {   //to nam generuje html z lisyta ksiazek
+    const booksContainer = document.getElementById('books'); // to pobiera element DOM z HTMLa do ktorego chcesz wstrzyknac liste ksiazek
+    booksContainer.innerHTML = ''; // resetuje html
 
-const generateBooks = () => {
-    books.forEach((book) => {
+    booksList.forEach((book) => {
         booksContainer.innerHTML += `
-        <div class="books">
-            <img class="image" src=${book.image}>
-            <p class="book__info title">${book.title}</p>
-            <p class="book__info year">${book.year}</p>
-            <p class="book__info price">${book.price}</p>
-            <p class="book__info category">${book.category}</p>
-        </div>
-    `
-    })
+            <div class="books">
+                <img class="image" src=${book.image}>
+                <p class="book__info title">${book.title}</p>
+                <p class="book__info year">${book.year}</p>
+                <p class="book__info price">${book.price}</p>
+                <p class="book__info category">${book.category}</p>
+            </div>
+        `
+    });
 }
 
-generateBooks();
-
+generateHtml(books); //to wywyoluje funkcje generateHtml po uruchomieniu strony  zby pokazly sie ksiazki
 
 // Funkcja ktora znajdzie książkę po tytule z liter znajdujacych sie w dowolnym miejscu tekstu
 const findBook = () => {
@@ -62,37 +79,15 @@ const findBook = () => {
             book.price.toLowerCase().includes(formattedInput) // ksiazki o tytule "term" zwroca "true"
         })
     
-        booksContainer.innerHTML = '';
-    
-        foundBooks.forEach((book) => {
-            booksContainer.innerHTML += `
-                <div class="books">
-                    <img class="image" src=${book.image}>
-                    <p class="book__info title">${book.title}</p>
-                    <p class="book__info year">${book.year}</p>
-                    <p class="book__info price">${book.price}</p>
-                    <p class="book__info category">${book.category}</p>
-                </div>
-            `
-        });
+        generateHtml(foundBooks)
     } else {
         alert('Podaj więcej znaków');
     }
 }
 
-// findBook('italia');
-
-
-
-
-
 
 const search = document.getElementById('searchButton')
-const searchInput = document.getElementById('searchInput')
-
-
 search.addEventListener('click', findBook);
-
 
 const validateForm = (inputValue) => {
     return inputValue.length > 3;

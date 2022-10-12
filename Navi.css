@@ -58,32 +58,33 @@ body {
 }
 
 
+
+
+
 .conteiner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 
 .image {
     border: 6px solid rgb(218, 170, 125);
     border-radius: 4px;
-    width: 250px;
-    height: 360px;
-   
+    width: calc(100% - 12px);
 }
 
 .books{
     font-weight: 900;
+    margin: 0 20px;
+    width:calc(20% - 40px);
+    text-align: center;
 }
 
-/* .title{
-    border-radius: 4px;
-    background-color: rgb(228, 140, 24);
-} */
+
 
 .book__info{
 
-background-color: red;
+background-color: rgba(236, 156, 8, 0.822);
 }
