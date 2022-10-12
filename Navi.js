@@ -1,50 +1,62 @@
 const books = [{
-    image: "https://ecsmedia.pl/c/zrozumiec-javascript-wprowadzenie-do-programowania-w-iext115645049.jpg",
-    title: "Zrozumieć JavaScript",
+    image: "./picture/alice.jpg",
+    title: "Alice in Wonderland",
     year: "Rok produkcji 2021",
-    price: "35.99 zł",
-    category: "Cate. Nauka",
+    price: "95.99 zł",
+    category: "Cate. Fantasy",
 }, {
-    image: "https://img.tantis.pl/image/73e08032-e0e6-4e09-942e-7d73b9ba85ee/550x400/webp",
-    title: "JavaScript",
+    image: "./picture/circus.jpg",
+    title: "Circus of Wonders",
     year: "Rok produkcji 2022",
-    price: "39.99 zł",
-    category: "Cate. Nauka",
+    price: "139.99 zł",
+    category: "Cate. Fun",
 }, {
-    image: "https://ecsmedia.pl/c/to-w-iext117293967.jpg",
-    title: "This",
+    image: "./picture/To.jpg",
+    title: "It",
     year: "Rok produkcji 2017",
     price: "79.80 zł",
     category: "Cate. Horror",
 }, {
-    image: "https://m.media-amazon.com/images/I/51gDkZW2+9S._SY344_BO1,204,203,200_.jpg",
-    title: "Alice in Wonderland",
-    year: "Rok produkcji 2022",
-    price: "99.99 zł",
+    image: "./picture/devil.jpg",
+    title: "The Devils Hand",
+    year: "Rok produkcji 2017",
+    price: "59.99 zł",
+    category: "Cate. Horror",
+}, {
+    image: "./picture/harry_potter.jpg",
+    title: "Harry Potter",
+    year: "Rok produkcji 2019",
+    price: "129.99 zł",
     category: "Cate. Fantasy",
 }, {
-    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
+    image: "./picture/java.jpg",
     title: "Italia na Talerzu",
     year: "Rok produkcji 2022",
-    price: "139.99 zł",
-    category: "Cate. Kuchnia",
+    price: "78.99 zł",
+    category: "Cate. Sience",
 }, {
-    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
-    title: "Italia na Talerzu",
+    image: "./picture/kompania_braci.jpg",
+    title: "Kompania Braci",
+    year: "Rok produkcji 2001",
+    price: "109.99 zł",
+    category: "Cate. War",
+},{
+    image: "./picture/rock.jpg",
+    title: "Kompania Braci",
+    year: "Rok produkcji 2017",
+    price: "59.00 zł",
+    category: "Cate. Music",
+},{
+    image: "./picture/zrozumiec_javascript.jpg",
+    title: "Zrozumieć Javascript",
     year: "Rok produkcji 2022",
-    price: "139.99 zł",
-    category: "Cate. Kuchnia",
-}, {
-    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
-    title: "Italia na Talerzu",
-    year: "Rok produkcji 2022",
-    price: "139.99 zł",
-    category: "Cate. Kuchnia",
-}, {
-    image: "https://inverso.pl/img/imagecache/381001-382000/375x513_product_media_381001-382000_21681A00149KS-j.webp",
-    title: "Italia na Talerzu",
-    year: "Rok produkcji 2022",
-    price: "139.99 zł",
+    price: "119.99 zł",
+    category: "Cate. Sience",
+},{
+    image: "./picture/kuchniaJap.jpg",
+    title: "Sushi",
+    year: "Rok produkcji 2019",
+    price: "149.99 zł",
     category: "Cate. Kuchnia",
 }];
 
@@ -90,6 +102,6 @@ const search = document.getElementById('searchButton')
 search.addEventListener('click', findBook);
 
 const validateForm = (inputValue) => {
-    return inputValue.length > 3;
+    return inputValue.length >= 2;
   }
   

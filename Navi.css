@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: darkgrey;
+    background-color: rgba(190, 89, 252, 1);
+    background-image: linear-gradient(197deg, rgba(190, 89, 252, 1) 1%, rgba(40, 83, 198, 1) 45%, rgba(189, 46, 208, 1) 100%);
 }
 
 .header {
@@ -43,17 +44,17 @@ body {
 }
 
 .btrSearch {
-    height: 30px;
+    height: 40px;
     width: 200px;
     border: none;
-    border-radius: 8px;
+    border-radius: 90px 20px 90px 20px;
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    
+
 }
 
-.btrSearch:hover{
+.btrSearch:hover {
     background-color: rgb(216, 148, 21);
 }
 
@@ -73,18 +74,28 @@ body {
     border: 6px solid rgb(218, 170, 125);
     border-radius: 4px;
     width: calc(100% - 12px);
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
 }
 
-.books{
-    font-weight: 900;
+.image:hover{
+    filter: grayscale(0%);
+}
+
+.books {
+
+    font-weight: 500;
     margin: 0 20px;
-    width:calc(20% - 40px);
+    width: calc(20% - 40px);
     text-align: center;
+    margin-bottom: 15px;
 }
 
 
 
-.book__info{
-
-background-color: rgba(236, 156, 8, 0.822);
+.book__info {
+    font-weight: bold;
+    color: white;
+    background-color: rgba(238, 157, 7, 0.85);
+    text-shadow: 4px 4px 7px rgb(53, 54, 59);
 }
