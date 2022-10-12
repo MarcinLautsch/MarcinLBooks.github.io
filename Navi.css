@@ -78,8 +78,9 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.image:hover{
+.image:hover {
     filter: grayscale(0%);
+
 }
 
 .books {
