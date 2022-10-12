@@ -30,7 +30,7 @@ const books = [{
     category: "Cate. Fantasy",
 }, {
     image: "./picture/java.jpg",
-    title: "Italia na Talerzu",
+    title: "Java",
     year: "Rok produkcji 2022",
     price: "78.99 zł",
     category: "Cate. Sience",
@@ -42,7 +42,7 @@ const books = [{
     category: "Cate. War",
 },{
     image: "./picture/rock.jpg",
-    title: "Kompania Braci",
+    title: "Rock Covers",
     year: "Rok produkcji 2017",
     price: "59.00 zł",
     category: "Cate. Music",

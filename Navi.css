@@ -5,8 +5,11 @@
 }
 
 body {
-    background-color: rgba(190, 89, 252, 1);
-    background-image: linear-gradient(197deg, rgba(190, 89, 252, 1) 1%, rgba(40, 83, 198, 1) 45%, rgba(189, 46, 208, 1) 100%);
+    background-image: url('../NaviBar/picture/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgba(190, 89, 252, 1);
+    background-image: linear-gradient(197deg, rgba(190, 89, 252, 1) 1%, rgba(40, 83, 198, 1) 45%, rgba(189, 46, 208, 1) 100%); */
 }
 
 .header {
