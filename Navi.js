@@ -77,12 +77,14 @@ function addBook(event) {
     const inputAddTitle = document.getElementById('addTitle').value;
     const inputAddYear = document.getElementById('addYear').value;
     const inputAddCategory = document.getElementById('addCategory').value;
+    const inputAddPrice =  document.getElementById('addPrice').value;
     const inputAddSrc = document.getElementById('addSrc').value;
 
     const book = {
         image: inputAddSrc,
         title: inputAddTitle,
         year: inputAddYear,
+        price: inputAddPrice,
         category: inputAddCategory,
     }
 
